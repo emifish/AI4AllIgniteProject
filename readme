@@ -1,0 +1,83 @@
+In Spring 2024 I was a project mentor for an AI4All Ignite cohort.
+The cohort represented five undergraduate CS students across a mix of U.S. institutions: University of Maryland, University of Texas A&M, and Stanford University.
+Project Idea: Spam Detection (NLP + CV Application)
+
+Topic (Nathania)
+Enhancing Spam Email Detection through Textual and Logo Analysis
+Abstract
+Our research project proposes a novel approach to combat spam emails by integrating textual analysis and logo recognition using NLP & computer vision techniques. By leveraging natural language processing (NLP) and machine learning algorithms, we aim to extract key features from email content and accurately classify spam messages. Additionally, as a possible extension, we want to incorporate logo recognition algorithms to analyze embedded images, enhancing the detection capabilities beyond textual analysis alone. Through this multifaceted approach, we seek to improve email security and efficiency while minimizing false positives and negatives, thus addressing a critical challenge in today's digital communication landscape.
+
+
+Research Question (Raiyaan): 
+
+Introduction:
+Throughout the history of the internet, some form of exploitative and malicious technique has existed to take advantage of anyone who relies on its utility. Some of the first recorded unsolicited emails/messages can be found in one of the very first instances of wide-area networking. In the late 1960s, the US Department of Defense’s ARPA (Advanced Research Projects Agency) developed the first wide-area packet-switched network with distributed control called ARPANET. A marketing Manager who used the tool pushed the first instance of spam by sending an advertisement to approximately 393 recipients across ARPANET which promoted a new line of computers that also included a chance to win a “green card” (most likely enticing those who want to work in the US). This event sparked a debate on the potential abuse of a networking communication system and would snowball into modern examples of email spam. CISCO, a US-based technology company that develops, manufactures, and sells networking products, defines spam email as unsolicited bulk email, often sent for commercial purposes. While some businesses exploit this low-cost method despite ethical concerns, spam can also be a malicious attempt to gain access to your computer (CISCO, 2024). They may contain malicious links that can infect a computer with malware (see What is malware?). It's crucial to exercise caution when encountering spam emails. Clicking links within them should be avoided. Often, dangerous spam emails create a sense of urgency to pressure recipients into taking action. However, legitimate companies typically won't use email to pressure for immediate decisions. Nonetheless, even the most seasoned keyboard warriors could potentially fall trap to the coy tactics used by malicious email spammers. With the rise of AI and Machine learning though, the usage of AI/ML to effectively and efficiently analyze text has become a staple in the industry. This brings up the hypothesis and overall question that our project will attempt to answer. Can AI and machine learning be harnessed to develop a preventive tool that can accurately identify and flag spam or malicious emails before users interact with them?
+
+Research Question:
+	Can AI and machine learning be harnessed to develop a preventive tool that can accurately identify and flag spam or malicious emails before users interact with them? 
+
+
+Type of Algorithms (William):
+SIFT (scale-invariant feature transform algorithm)
+SIFT identifies key points and generates descriptors invariant to various image transformations, including rotation, illumination, and viewpoint changes, enabling robust object detection and recognition.
+A four-step computer vision algorithm
+Scale-space Extrema Detection
+Keypoint Localization
+Orientation Assignment
+Keypoint Descriptor
+SURF (Speeded-Up Robust Features)
+It is utilized primarily for object recognition, classification, image registration, and reconstruction tasks. It offers superior speed to SIFT while maintaining or improving the quality of detected points.
+A two-step algorithm
+Feature Extraction
+Feature Description
+YOLO (You Only Look Once)
+It has swift and accurate real-time object detection capabilities. Utilizing convolutional neural networks (CNNs), YOLO predicts class probabilities and applies bounding boxes to detected objects in input images. Notably, the algorithm's efficiency stems from its single forward propagation through the model for object detection and prediction.
+
+
+Datasets (Nhat): 
+Spam Email Text/Images 
+Real/Fake Logos
+SMS
+https://www.kaggle.com/datasets/abdallahwagih/spam-emails
+https://www.cs.jhu.edu/~mdredze/datasets/image_spam/
+https://www.kaggle.com/datasets/prosperchuks/fakereal-logo-detection-dataset/data
+https://www.cs.princeton.edu/cass/spam/
+https://users.cs.northwestern.edu/~yga751/ML/ISH.htm
+https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset
+https://www.kaggle.com/datasets/venky73/spam-mails-dataset
+
+
+Identify Bias (Salina): 
+Political Bias:  
+The spam filter algorithm displays considerable political bias.  Email service platforms such as Gmail, Yahoo, and Outlook have been observed to exhibit political biases, especially when nearing the election months. 
+In the months leading up to the 2020 U.S. election,  Gmail displayed a clear lean towards the left (Democrats) as it  “marked 59.3% more emails from the right candidate as spam” than those from the left candidates. In contrast, Outlook and Yahoo leaned towards the right (Republicans) as they “marked 20.4% and 14.2% more emails from the right candidates as spam” than those from the left. Such a bias will inhibit free speech and possibly influence the outcome of an election. 
+
+
+Fix 1: Emails that come from political campaigns will not be automatically redirected to the spam/junk folder. In other words, the algorithm will detect political emails and allow it to bypass the spam filtering tool, giving the user a chance to look at it before it is redirected. (Political BIAS Emails Act)
+Fix 2: The data used to create the model will be accurate, ensuring that the emails and SMS messages within the dataset are representative of the political diversity of the population, coming from all political backgrounds. Transparency should be encouraged by allowing people to examine the model for any form of bias and by documenting methods of data selection and cleansing. When inspecting the model's performance, the measure of bias will also be evaluated.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+References
+Computer Vision: Algorithms and Applications to Explore in 2022. (2023, December 23). ProjectPro. https://www.projectpro.io/article/computer-vision-algorithms-and-applications/514 
+Priezkalns, E. (2022, May 16). Why Massive Political Bias in Email Spam Algorithms Is Problematic for Free Speech More Generally | Commsrisk. Commsrisk. https://commsrisk.com/why-massive-political-bias-in-email-spam-algorithms-is-problematic-for-free-speech-more-generally/ 
+Schmelzer, R. (2020, June 10). 6 Ways to Reduce Different Types of Bias in Machine Learning. SearchEnterpriseAI. https://www.techtarget.com/searchenterpriseai/feature/6-ways-to-reduce-different-types-of-bias-in-machine-learning 
+What is Spam Email? (n.d.). Cisco. Retrieved March 15, 2024, from https://www.cisco.com/c/en/us/products/security/email-security/what-is-spam.html#~types-of-spam 
+Yepez, W. (2022, July 28). What Does the Political BIAS Emails Act Do? National Taxpayers Union. https://www.ntu.org/publications/detail/what-does-the-political-bias-emails-act-do 
